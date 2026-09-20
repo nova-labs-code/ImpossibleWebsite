@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Impossible Website</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            min-height: 100%;
+        }
+
+        body {
+            background: #050505;
+            color: #ddd;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            height: 70px;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1c1c1c;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .number {
+            color: #555;
+            font-family: monospace;
+        }
+
+        main {
+            min-height: calc(100vh - 120px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .scene {
+            width: min(700px, 100%);
+            text-align: center;
+        }
+
+        .room {
+            height: 330px;
+            border: 1px solid #222;
+            position: relative;
+            background: #090909;
+        }
+
+        .clock {
+            position: absolute;
+            left: 50%;
+            top: 70px;
+
+            width: 130px;
+            height: 130px;
+
+            border: 1px solid #555;
+            border-radius: 50%;
+
+            transform: translateX(-50%);
+        }
+
+        .clock::after {
+            content: "";
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            width: 5px;
+            height: 5px;
+
+            background: #888;
+            border-radius: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .hand {
+            position: absolute;
+
+            width: 1px;
+            height: 45px;
+
+            background: #777;
+
+            left: 50%;
+            bottom: 50%;
+
+            transform-origin: bottom;
+        }
+
+        .text {
+            margin-top: 30px;
+            color: #444;
+            font-family: monospace;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        footer {
+            height: 50px;
+            border-top: 1px solid #1c1c1c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-family: monospace;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="title">THE IMPOSSIBLE WEBSITE</div>
+    <div class="number">003</div>
+</header>
+
+<main>
+
+    <section class="scene">
+
+        <div class="room">
+
+            <div class="clock">
+                <div class="hand"></div>
+            </div>
+
+        </div>
+
+        <div class="text">
+            THE CLOCK HAS HANDS.<br>
+            THE CLOCK HAS NUMBERS.<br>
+            THE CLOCK HAS NO SOUND.
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    LISTEN CAREFULLY
+</footer>
+
+</body>
+</html>

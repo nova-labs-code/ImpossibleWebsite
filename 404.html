@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 — THE IMPOSSIBLE WEBSITE</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            min-height: 100%;
+
+            background: #050505;
+            color: #d6d6d6;
+
+            font-family: monospace;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        /* subtle background */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.015) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.015) 1px,
+                    transparent 1px
+                );
+
+            background-size: 40px 40px;
+
+            pointer-events: none;
+        }
+
+        /* header */
+
+        header {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 22px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom: 1px solid #111;
+
+            color: #555;
+
+            font-size: 11px;
+            letter-spacing: 3px;
+        }
+
+        .site-name {
+            color: #777;
+        }
+
+        .page-number {
+            color: #333;
+        }
+
+        /* main */
+
+        main {
+            position: relative;
+
+            width: min(520px, calc(100% - 40px));
+
+            text-align: center;
+        }
+
+        .error-code {
+            margin-bottom: 25px;
+
+            color: #292929;
+
+            font-size: 70px;
+            line-height: 1;
+
+            letter-spacing: 12px;
+
+            user-select: none;
+        }
+
+        .line {
+            width: 35px;
+            height: 1px;
+
+            margin: 0 auto 28px;
+
+            background: #333;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+
+            color: #ddd;
+
+            font-size: 24px;
+            font-weight: normal;
+
+            letter-spacing: 6px;
+        }
+
+        .message {
+            margin: 0 auto 35px;
+
+            color: #555;
+
+            font-size: 12px;
+            line-height: 2;
+
+            letter-spacing: 1px;
+        }
+
+        /* button */
+
+        button {
+            padding: 13px 24px;
+
+            border: 1px solid #292929;
+
+            background: #090909;
+            color: #666;
+
+            font-family: monospace;
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            cursor: pointer;
+
+            transition:
+                border-color 0.2s ease,
+                color 0.2s ease,
+                background 0.2s ease;
+        }
+
+        button:hover {
+            border-color: #555;
+
+            background: #0d0d0d;
+
+            color: #ddd;
+        }
+
+        button:active {
+            background: #111;
+        }
+
+        /* footer */
+
+        footer {
+            position: fixed;
+
+            bottom: 20px;
+            left: 0;
+
+            width: 100%;
+
+            text-align: center;
+
+            color: #292929;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+        }
+
+        /* mobile */
+
+        @media (max-width: 500px) {
+
+            header {
+                padding: 18px;
+            }
+
+            .error-code {
+                font-size: 52px;
+                letter-spacing: 8px;
+            }
+
+            h1 {
+                font-size: 20px;
+                letter-spacing: 4px;
+            }
+
+            .message {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="site-name">
+            THE IMPOSSIBLE WEBSITE
+        </div>
+
+        <div class="page-number">
+            404
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="error-code">
+            404
+        </div>
+
+        <div class="line"></div>
+
+        <h1>
+            INCORRECT
+        </h1>
+
+        <p class="message">
+            THAT WASN'T IT.<br>
+            THE PATH YOU FOLLOWED LEADS NOWHERE.
+        </p>
+
+        <button id="tryAgain">
+            TRY AGAIN
+        </button>
+
+    </main>
+
+
+    <footer>
+        SOMEWHERE, YOU MISSED SOMETHING.
+    </footer>
+
+
+    <script>
+        const button = document.getElementById("tryAgain");
+
+        button.addEventListener("click", () => {
+
+            if (document.referrer) {
+                window.location.href = document.referrer;
+            } else {
+                window.location.href = "/impossible-website/";
+            }
+
+        });
+    </script>
+
+</body>
+</html>

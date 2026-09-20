@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Impossible Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #070707;
+            color: #ddd;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            height: 70px;
+            padding: 0 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-bottom: 1px solid #1d1d1d;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .number {
+            color: #555;
+            font-family: monospace;
+        }
+
+        main {
+            min-height: calc(100vh - 120px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px 20px;
+        }
+
+        .card {
+            width: min(650px, 100%);
+
+            border: 1px solid #222;
+            padding: 45px;
+
+            background: #0b0b0b;
+            text-align: center;
+        }
+
+        .signal {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 8px;
+
+            margin: 35px 0;
+        }
+
+        .signal div {
+            height: 35px;
+            border: 1px solid #292929;
+        }
+
+        .signal div:nth-child(3),
+        .signal div:nth-child(6),
+        .signal div:nth-child(9) {
+            background: #441010;
+            border-color: #7a2020;
+        }
+
+        .text {
+            color: #666;
+            font-family: monospace;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .hint {
+            margin-top: 30px;
+            color: #333;
+            font-size: 10px;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            height: 50px;
+            border-top: 1px solid #1d1d1d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            font-family: monospace;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="title">THE IMPOSSIBLE WEBSITE</div>
+    <div class="number">008</div>
+</header>
+
+<main>
+
+    <section class="card">
+
+        <div class="text">
+            THE SIGNAL REPEATS.<br>
+            EVERY THIRD BEAT IS DIFFERENT.
+        </div>
+
+        <div class="signal">
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="text">
+            THE DIFFERENCE IS NOT IN THE SOUND.
+        </div>
+
+        <div class="hint">
+            LOOK AT WHAT THE SIGNAL BECOMES.
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    008
+</footer>
+
+</body>
+</html>

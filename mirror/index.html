@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Impossible Website</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            min-height: 100%;
+        }
+
+        body {
+            background: #070707;
+            color: #ddd;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            height: 70px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #1d1d1d;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .number {
+            color: #555;
+            font-family: monospace;
+        }
+
+        main {
+            min-height: calc(100vh - 120px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .page {
+            width: min(700px, 100%);
+            text-align: center;
+        }
+
+        .clock {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 45px;
+
+            border: 1px solid #555;
+            border-radius: 50%;
+
+            position: relative;
+        }
+
+        .center {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #aaa;
+            border-radius: 50%;
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hand {
+            position: absolute;
+            width: 1px;
+            height: 105px;
+            background: #777;
+
+            left: 50%;
+            bottom: 50%;
+
+            transform-origin: bottom;
+            transform: translateX(-50%) rotate(30deg);
+        }
+
+        .hand.short {
+            height: 75px;
+            transform: translateX(-50%) rotate(120deg);
+        }
+
+        .numbers {
+            color: #555;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        .reversed {
+            margin-top: 30px;
+            color: #777;
+            font-family: monospace;
+            direction: rtl;
+        }
+
+        .hint {
+            margin-top: 35px;
+            color: #333;
+            font-family: monospace;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            height: 50px;
+            border-top: 1px solid #1d1d1d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-family: monospace;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="title">THE IMPOSSIBLE WEBSITE</div>
+    <div class="number">002</div>
+</header>
+
+<main>
+
+    <section class="page">
+
+        <div class="clock">
+            <div class="hand"></div>
+            <div class="hand short"></div>
+            <div class="center"></div>
+        </div>
+
+        <div class="numbers">
+            12 &nbsp; 3 &nbsp; 6 &nbsp; 9
+        </div>
+
+        <div class="reversed">
+            emit eht daer
+        </div>
+
+        <div class="hint">
+            SOMETHING HERE ONLY MAKES SENSE WHEN TURNED AROUND.
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    002
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Impossible Website</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            min-height: 100%;
+        }
+
+        body {
+            background: #070707;
+            color: #ddd;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            height: 70px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #1d1d1d;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .number {
+            color: #555;
+            font-family: monospace;
+        }
+
+        main {
+            min-height: calc(100vh - 120px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .compass {
+            width: 340px;
+            height: 340px;
+
+            border: 1px solid #444;
+            border-radius: 50%;
+
+            position: relative;
+        }
+
+        .direction {
+            position: absolute;
+            color: #777;
+            font-family: monospace;
+        }
+
+        .north {
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ddd;
+        }
+
+        .south {
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .east {
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .west {
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .needle {
+            position: absolute;
+            width: 2px;
+            height: 125px;
+            background: #777;
+
+            left: 50%;
+            top: 50%;
+
+            transform-origin: bottom;
+            transform: translate(-50%, -100%) rotate(0deg);
+        }
+
+        .center {
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            background: #aaa;
+            border-radius: 50%;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .hint {
+            margin-top: 35px;
+            color: #333;
+            font-family: monospace;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        footer {
+            height: 50px;
+            border-top: 1px solid #1d1d1d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-family: monospace;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="title">THE IMPOSSIBLE WEBSITE</div>
+    <div class="number">004</div>
+</header>
+
+<main>
+
+    <section>
+
+        <div class="compass">
+
+            <div class="direction north">N</div>
+            <div class="direction south">S</div>
+            <div class="direction east">E</div>
+            <div class="direction west">W</div>
+
+            <div class="needle"></div>
+            <div class="center"></div>
+
+        </div>
+
+        <div class="hint">
+            WHEN EVERYTHING IS QUIET,<br>
+            WHICH WAY DOES THE NEEDLE STILL KNOW?
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    004
+</footer>
+
+</body>
+</html>

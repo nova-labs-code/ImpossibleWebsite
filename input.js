@@ -1,39 +1,45 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.createElement("form");
 
-    form.id = "answer-form";
+    const inputArea = document.createElement("div");
 
-    form.innerHTML = `
-        <input
-            id="answer-input"
-            type="text"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="enter the next word"
-            aria-label="Enter answer"
-        >
+    inputArea.id = "answer-area";
 
-        <button type="submit">ENTER</button>
+    inputArea.innerHTML = `
+        <form id="answer-form">
+            <input
+                id="answer-input"
+                type="text"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="enter the next word"
+                aria-label="Enter answer"
+            >
+
+            <button type="submit">ENTER</button>
+        </form>
     `;
 
-    document.body.appendChild(form);
+    document.body.appendChild(inputArea);
 
 
     const style = document.createElement("style");
 
     style.textContent = `
-        #answer-form {
-            position: fixed;
-            left: 50%;
-            bottom: 25px;
-            transform: translateX(-50%);
+        #answer-area {
+            width: 100%;
+            padding: 30px 20px 40px;
 
+            display: flex;
+            justify-content: center;
+
+            box-sizing: border-box;
+        }
+
+        #answer-form {
             display: flex;
             gap: 8px;
 
-            width: min(420px, calc(100% - 30px));
-
-            z-index: 9999;
+            width: min(420px, 100%);
         }
 
         #answer-input {
@@ -99,11 +105,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         window.location.href =
-            "/impossible-website/" +
+            "/ImpossibleWebsite/" +
             encodeURIComponent(answer) +
             "/";
     });
 
 
     input.focus();
+
 });

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Impossible Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #070707;
+            color: #d8d8d8;
+            font-family: Georgia, serif;
+        }
+
+        header {
+            height: 70px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #1d1d1d;
+            font-family: Arial, sans-serif;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .number {
+            color: #555;
+            font-family: monospace;
+        }
+
+        main {
+            min-height: calc(100vh - 120px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .story {
+            width: min(700px, 100%);
+            border: 1px solid #222;
+            padding: 45px 50px;
+            background: #0b0b0b;
+            line-height: 2;
+            font-size: 18px;
+        }
+
+        .story p {
+            margin: 0 0 25px;
+        }
+
+        .shadow {
+            position: relative;
+            display: inline-block;
+            color: #ddd;
+        }
+
+        .shadow::after {
+            content: "shadow";
+            position: absolute;
+            left: 4px;
+            top: 5px;
+            color: #242424;
+            z-index: -1;
+        }
+
+        .hint {
+            margin-top: 30px;
+            text-align: center;
+            color: #333;
+            font-family: monospace;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            height: 50px;
+            border-top: 1px solid #1d1d1d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-family: monospace;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="title">THE IMPOSSIBLE WEBSITE</div>
+    <div class="number">006</div>
+</header>
+
+<main>
+
+    <article class="story">
+
+        <p>
+            The paper contained only one sentence:
+        </p>
+
+        <p>
+            “The light was directly above the table, but something beneath
+            the chair followed him wherever he went.”
+        </p>
+
+        <p>
+            Daniel stepped toward the window.
+        </p>
+
+        <p>
+            The thing moved with him.
+        </p>
+
+        <p>
+            He stepped backward.
+        </p>
+
+        <p>
+            It moved backward too.
+        </p>
+
+        <p>
+            He looked down.
+        </p>
+
+        <p>
+            There was nothing there.
+        </p>
+
+        <div class="hint">
+            WHAT FOLLOWS YOU WITHOUT MOVING?
+        </div>
+
+    </article>
+
+</main>
+
+<footer>
+    006
+</footer>
+
+</body>
+</html>
